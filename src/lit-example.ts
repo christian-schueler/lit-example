@@ -3,8 +3,8 @@ import { property, customElement } from 'lit/decorators.js';
 
 const logo = new URL('../../assets/open-wc-logo.svg', import.meta.url).href;
 
-@customElement('my-lit-example')
-export class MyLitExample extends LitElement {
+@customElement('lit-example')
+export class LitExample extends LitElement {
   @property({ type: String }) header = 'My app';
 
   static styles = css`
@@ -19,7 +19,7 @@ export class MyLitExample extends LitElement {
       max-width: 960px;
       margin: 0 auto;
       text-align: center;
-      background-color: var(--my-lit-example-background-color);
+      background-color: var(--lit-examples-background-color);
     }
 
     main {
@@ -56,7 +56,7 @@ export class MyLitExample extends LitElement {
         <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
         <h1>${this.header}</h1>
 
-        <p>Edit <code>src/MyLitExample.ts</code> and save to reload.</p>
+        <p>Edit <code>src/LitExamples.ts</code> and save to reload.</p>
         <a
           class="app-link"
           href="https://open-wc.org/guides/developing-components/code-examples"
