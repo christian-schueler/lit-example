@@ -64,14 +64,16 @@ export class LitTaskExample extends LitElement {
           <p
             ?hidden=${this._hidePunchline}
           >${joke.punchline}</p>
-          <button
-            type="button"
-            @click=${this.__showPunchline}
-          >Show Punchline</button>
-          <button
-            type="button"
-            @click=${() => this._fetchJoke.run()}
-          >New Joke</button>
+          <p>
+            <button
+              type="button"
+              @click=${this.__showPunchline}
+            >Show Punchline</button>
+            <button
+              type="button"
+              @click=${() => this._fetchJoke.run()}
+            >New Joke</button>
+          </p>
         `,
       error: (e) => html`<p>Error: ${e}</p>`
     });
